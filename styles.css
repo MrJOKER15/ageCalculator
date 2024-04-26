@@ -1,0 +1,115 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* لون خلفية أساسي */
+    color: #333; /* لون نص أساسي */
+    display: flex;
+    flex-direction: column; /* جعل الشكل عمودي */
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: #2b3b47; /* تغيير لون الواجهة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    color: #ffffff; /* لون نص الواجهة */
+    direction: rtl; /* جعل الاتجاه من اليمين لليسار لدعم العربية */
+    animation: appear 500ms ease-out forwards;
+    margin-bottom: 20px; /* فراغ بين الحاوية و الملاحظة */
+}
+
+.note-container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #ddf5d8; /* لون خلفية الملاحظة */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: right; /* جعل النص يبدأ من اليمين */
+    color: red; /* لون نص الملاحظة */
+    font-size: 1em; /* تصغير خط الملاحظة */
+    margin-bottom: 20px; /* فراغ بعد الملاحظة */
+}
+
+.note-container strong {
+    color: black; /* تغيير لون "ملاحظة:" إلى الأسود */
+    margin-bottom: 10px; /* مسافة بين عنوان الملاحظة والنص */
+}
+
+.article-container {
+    width: 90%;
+    max-width: 800px; /* أو أي عرض تفضله */
+    margin-top: 20em; /* المسافة بين الحاوية والمقالة */
+    padding: 20px;
+    background: #f9f9f9; /* لون خلفية المقالة */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+article h3 {
+    margin-top: 20px; /* المسافة بين عناوين الفقرات والنص */
+}
+
+article p {
+    margin-bottom: 6em; /* المسافة بين الفقرات */
+    direction: rtl; /* جعل النص يظهر من اليمين إلى اليسار */
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, label {
+    text-align: right; /* جعل النص يبدأ من اليمين */
+}
+
+input, button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    background-color: #ffffff; /* تعيين لون خلفية الادخال للتاريخ إلى الأبيض */
+    color: #333; /* لون النص */
+}
+
+input:focus, button:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+    background-color: #58be5d; /* تغيير لون الأزرار إلى اللون المحدد */
+    color: #ffffff; /* لون نص الأزرار */
+}
+
+button:hover {
+    background-color: #3d9e42; /* تغيير لون الأزرار عند التحويم */
+}
+
+.error-message {
+    color: red; /* اللون الأحمر لنص الخطأ */
+    margin-top: 10px; /* توفير بعض المسافة بين النص والعناصر الأخرى */
+}
+
+#result {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0); /* جعل خلفية النتيجة شفافة تمامًا */
+}
